@@ -1,0 +1,15 @@
+{
+  "name": "acf/destacado",
+  "title": "Destacado",
+  "description": "Bloque Destacado",
+  "category": "guegue",
+  "icon": "button",
+  "keywords": ["destacado"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "destacado.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "acf/multimedia",
+  "title": "Multimedia",
+  "description": "Bloque Multimedia",
+  "category": "guegue",
+  "icon": "html",
+  "keywords": ["multimedia"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "multimedia.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

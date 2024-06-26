@@ -1,0 +1,15 @@
+{
+  "name": "acf/grid-multimedia",
+  "title": "Grid Multimedia",
+  "description": "Bloque Grid Multimedia",
+  "category": "guegue",
+  "icon": "welcome-widgets-menus",
+  "keywords": ["grid-multimedia"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "grid-multimedia.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

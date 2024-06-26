@@ -1,0 +1,15 @@
+{
+  "name": "acf/extract",
+  "title": "Extracto",
+  "description": "Bloque Extracto",
+  "category": "guegue",
+  "icon": "testimonial",
+  "keywords": ["extract"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "extract.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

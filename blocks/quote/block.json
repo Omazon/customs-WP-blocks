@@ -1,0 +1,15 @@
+{
+  "name": "acf/quote",
+  "title": "Quote",
+  "description": "Bloque Quote",
+  "category": "guegue",
+  "icon": "format-quote",
+  "keywords": ["quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "quote.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

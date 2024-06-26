@@ -1,0 +1,15 @@
+{
+  "name": "acf/links",
+  "title": "Enlaces",
+  "description": "Lista de enlaces",
+  "category": "guegue",
+  "icon": "list-view",
+  "keywords": ["links"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "links.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

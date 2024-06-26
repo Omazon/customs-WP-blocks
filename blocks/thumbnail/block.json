@@ -1,0 +1,15 @@
+{
+  "name": "acf/thumbnail",
+  "title": "Imagen de Entrada",
+  "description": "Bloque imagen principal",
+  "category": "guegue",
+  "icon": "format-image",
+  "keywords": ["thumbnail"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "thumbnail.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

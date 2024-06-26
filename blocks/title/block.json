@@ -1,0 +1,15 @@
+{
+  "name": "acf/title",
+  "title": "Título Especial",
+  "description": "Título de la Página",
+  "category": "guegue",
+  "icon": "heading",
+  "keywords": ["title"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "title.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

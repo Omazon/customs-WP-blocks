@@ -1,0 +1,15 @@
+{
+  "name": "acf/content",
+  "title": "Cuerpo de la entrada",
+  "description": "Bloque cuerpo de la Entrada",
+  "category": "guegue",
+  "icon": "menu-alt3",
+  "keywords": ["content"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "content.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

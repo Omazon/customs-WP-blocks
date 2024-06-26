@@ -1,0 +1,15 @@
+{
+  "name": "acf/entries",
+  "title": "Entradas",
+  "description": "Bloque Entradas",
+  "category": "guegue",
+  "icon": "media-spreadsheet",
+  "keywords": ["entries"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "entries.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "acf/standard",
+  "title": "Standard",
+  "description": "Bloque Standard",
+  "category": "guegue",
+  "icon": "columns",
+  "keywords": ["standard"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "standard.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

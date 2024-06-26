@@ -1,0 +1,15 @@
+{
+  "name": "acf/highlight",
+  "title": "Highlight",
+  "description": "Bloque Highlight",
+  "category": "guegue",
+  "icon": "align-wide",
+  "keywords": ["highlight"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "highlight.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

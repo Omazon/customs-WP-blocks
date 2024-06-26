@@ -1,0 +1,15 @@
+{
+  "name": "acf/newsletter",
+  "title": "Newsletter",
+  "description": "Bloque Newsletter",
+  "category": "guegue",
+  "icon": "align-right",
+  "keywords": ["newsletter"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "newsletter.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}
