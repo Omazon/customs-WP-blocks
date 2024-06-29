@@ -26,7 +26,7 @@ add_action( 'acf/include_fields', function() {
                 'post_type' => array(
                     0 => 'post',
                 ),
-                'post_status' => '',
+                'post_status' => 'publish',
                 'taxonomy' => '',
                 'filters' => array(
                     0 => 'search',
@@ -63,3 +63,5 @@ add_action( 'acf/include_fields', function() {
         'show_in_rest' => 0,
     ) );
 } );
+
+

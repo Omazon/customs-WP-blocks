@@ -197,6 +197,7 @@ add_action( 'acf/include_fields', function() {
                 'taxonomy' => '',
                 'filters' => array(
                     0 => 'search',
+                    1 => 'taxonomy',
                 ),
                 'return_format' => 'id',
                 'min' => 2,
@@ -229,3 +230,5 @@ add_action( 'acf/include_fields', function() {
         'show_in_rest' => 0,
     ) );
 } );
+
+

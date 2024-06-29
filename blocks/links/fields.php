@@ -28,6 +28,32 @@ add_action( 'acf/include_fields', function() {
                 'prepend' => '',
                 'append' => '',
             ),
+            array(
+                'key' => 'field_667c2d12cab6d',
+                'label' => 'Tipo de listado',
+                'name' => 'tipo_de_listado',
+                'aria-label' => '',
+                'type' => 'select',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'choices' => array(
+                    'cron' => 'Cronológico',
+                    'alfa' => 'Alfabético',
+                ),
+                'default_value' => 'cron',
+                'return_format' => 'value',
+                'multiple' => 0,
+                'allow_null' => 0,
+                'ui' => 0,
+                'ajax' => 0,
+                'placeholder' => '',
+            ),
         ),
         'location' => array(
             array(
@@ -49,4 +75,3 @@ add_action( 'acf/include_fields', function() {
         'show_in_rest' => 0,
     ) );
 } );
-

@@ -151,3 +151,91 @@ add_action( 'init', 'gb_register_acf_blocks' );
         );
     }
     add_action( 'init', 'register_pattern' );
+
+
+add_filter('acf/load_field/key=field_666a696e79a5d', 'load_just_categories_filter', 12, 1); //highlight
+//add_filter('acf/load_field/key=field_666e041bfe6e7', 'load_just_categories_filter', 12, 1); //post grande
+add_filter('acf/load_field/key=field_666e071b4b8ca', 'load_just_categories_filter', 12, 1); //post pequeno
+
+
+function load_just_categories_filter( $field ) {
+    $field['taxonomy'] = [];
+    $terms = get_terms( array(
+        'taxonomy' => 'category',
+        'hide_empty' => false,
+        'parent' => 0
+    ) );
+    if ( !empty($terms) ) {
+        foreach( $terms as $term ) {
+            $field['taxonomy'][] = 'category:'.$term->slug;
+        }
+    }
+
+    return $field;
+}
+
+add_filter('acf/fields/relationship/query/key=field_666a696e79a5d', 'my_acf_relationship_query', 10, 3);
+
+function my_acf_relationship_query($args, $field, $post_id) {
+    // Ajustar los argumentos de la consulta para asegurarse de que los resultados sean únicos
+    $args['posts_per_page'] = -1;
+    $args['post_status'] = 'publish';
+    $args['orderby'] = 'title';
+    $args['order'] = 'ASC';
+
+    // Ejecutar la consulta original
+    $query = new WP_Query($args);
+
+    // Array para almacenar los títulos únicos y los IDs de los posts
+    $unique_titles = array();
+    $unique_post_ids = array();
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            $post_id = get_the_ID();
+            $post_title = get_the_title();
+
+            // Solo añadimos el post_id si el título no está en el array para evitar duplicados
+            if (!in_array($post_title, $unique_titles)) {
+                $unique_titles[] = $post_title;
+                $unique_post_ids[] = $post_id;
+            }
+        }
+    }
+    wp_reset_postdata();
+
+    // Si hay post_ids únicos, ajustamos el argumento 'post__in'
+    if (!empty($unique_post_ids)) {
+        $args['post__in'] = $unique_post_ids;
+    }
+
+    return $args;
+}
+
+add_filter('acf/fields/relationship/query', 'acf_relationship_query_taxonomy', 10, 3);
+
+function acf_relationship_query_taxonomy($args, $field, $post_id) {
+    // Verificar si hay parámetros de taxonomía en la consulta
+    if (isset($_POST['taxonomy'])) {
+        $taxonomies = explode(',', $_POST['taxonomy']);
+        $args['tax_query'] = array(
+            'relation' => 'AND',
+        );
+        foreach ($taxonomies as $taxonomy) {
+            list($tax, $term) = explode(':', $taxonomy);
+            $args['tax_query'][] = array(
+                'taxonomy' => $tax,
+                'field' => 'slug',
+                'terms' => $term,
+            );
+        }
+    }
+
+    // Aplicar cualquier otro filtro necesario basado en otros parámetros de la consulta AJAX
+    if (isset($_POST['s'])) {
+        $args['s'] = sanitize_text_field($_POST['s']);
+    }
+
+    return $args;
+}
