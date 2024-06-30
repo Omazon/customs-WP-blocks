@@ -157,6 +157,7 @@ add_filter('acf/load_field/key=field_666a696e79a5d', 'load_just_categories_filte
 add_filter('acf/load_field/key=field_666e041bfe6e7', 'load_just_categories_filter', 12, 1); //post grande
 add_filter('acf/load_field/key=field_666e071b4b8ca', 'load_just_categories_filter', 12, 1); //post pequeno
 add_filter('acf/load_field/key=field_666e0f21b1abb', 'load_just_categories_filter', 12, 1); //standard
+add_filter('acf/load_field/key=field_666b7c5afe454', 'load_just_categories_filter', 12, 1); //newsletter
 function load_just_categories_filter( $field ) {
     $field['taxonomy'] = [];
 

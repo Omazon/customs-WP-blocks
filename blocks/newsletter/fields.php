@@ -183,44 +183,12 @@ add_action( 'acf/include_fields', function() {
                 'endpoint' => 0,
             ),
             array(
-                'key' => 'field_666b865622100',
-                'label' => 'Selecciona Post Tribuna',
-                'name' => 'selecciona_post_tribuna',
-                'aria-label' => '',
-                'type' => 'relationship',
-                'instructions' => 'Selecciona 1',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'post_type' => array(
-                    0 => 'tribuna',
-                ),
-                'post_status' => '',
-                'taxonomy' => '',
-                'filters' => array(
-                    0 => 'search',
-                ),
-                'return_format' => 'id',
-                'min' => 1,
-                'max' => 1,
-                'elements' => array(
-                    0 => 'featured_image',
-                ),
-                'bidirectional' => 0,
-                'bidirectional_target' => array(
-                ),
-            ),
-            array(
                 'key' => 'field_666b7c5afe454',
                 'label' => 'Selecciona Posts',
                 'name' => 'selecciona_posts',
                 'aria-label' => '',
                 'type' => 'relationship',
-                'instructions' => 'Selecciona 2',
+                'instructions' => 'Selecciona hasta 4 post, si se incluye Newsletter o RSS, éstos reemplazarán los ultimos post de la lista',
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
@@ -230,6 +198,9 @@ add_action( 'acf/include_fields', function() {
                 ),
                 'post_type' => array(
                     0 => 'post',
+                    1 => 'tribuna',
+                    2 => 'investigacion',
+                    3 => 'institucion',
                 ),
                 'post_status' => '',
                 'taxonomy' => '',
@@ -239,7 +210,7 @@ add_action( 'acf/include_fields', function() {
                 ),
                 'return_format' => 'id',
                 'min' => 2,
-                'max' => 2,
+                'max' => 4,
                 'elements' => array(
                     0 => 'featured_image',
                 ),
@@ -268,6 +239,8 @@ add_action( 'acf/include_fields', function() {
         'show_in_rest' => 0,
     ) );
 } );
+
+
 
 
 
