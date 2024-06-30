@@ -1,5 +1,4 @@
 <?php
-
 add_action( 'acf/include_fields', function() {
     if ( ! function_exists( 'acf_add_local_field_group' ) ) {
         return;
@@ -25,16 +24,21 @@ add_action( 'acf/include_fields', function() {
                 ),
                 'post_type' => array(
                     0 => 'post',
+                    1 => 'tribuna',
+                    2 => 'investigacion',
+                    3 => 'institucion',
                 ),
-                'post_status' => 'publish',
+                'post_status' => array(
+                    0 => 'publish',
+                ),
                 'taxonomy' => '',
                 'filters' => array(
                     0 => 'search',
                     1 => 'taxonomy',
                 ),
                 'return_format' => 'id',
-                'min' => 1,
-                'max' => 1,
+                'min' => '',
+                'max' => '',
                 'elements' => array(
                     0 => 'featured_image',
                 ),
@@ -63,5 +67,4 @@ add_action( 'acf/include_fields', function() {
         'show_in_rest' => 0,
     ) );
 } );
-
 

@@ -49,11 +49,11 @@ add_action( 'acf/include_fields', function() {
                 'ui' => 1,
             ),
             array(
-                'key' => 'field_6672549a3cb66',
+                'key' => 'field_6680accc556ca',
                 'label' => 'RSS',
-                'name' => 'rss',
+                'name' => '',
                 'aria-label' => '',
-                'type' => 'post_object',
+                'type' => 'accordion',
                 'instructions' => '',
                 'required' => 0,
                 'conditional_logic' => array(
@@ -65,6 +65,44 @@ add_action( 'acf/include_fields', function() {
                         ),
                     ),
                 ),
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'open' => 0,
+                'multi_expand' => 0,
+                'endpoint' => 0,
+            ),
+            array(
+                'key' => 'field_6680acf5556cb',
+                'label' => 'RSS Título',
+                'name' => 'rss_titulo',
+                'aria-label' => '',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'maxlength' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+            ),
+            array(
+                'key' => 'field_6672549a3cb66',
+                'label' => 'RSS',
+                'name' => 'rss',
+                'aria-label' => '',
+                'type' => 'post_object',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
                 'wrapper' => array(
                     'width' => '',
                     'class' => '',
@@ -230,5 +268,9 @@ add_action( 'acf/include_fields', function() {
         'show_in_rest' => 0,
     ) );
 } );
+
+
+
+
 
 

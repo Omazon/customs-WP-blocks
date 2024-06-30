@@ -4,6 +4,7 @@ $selecciona_post_tribuna = get_field('selecciona_post_tribuna');
 $selecciona_posts = get_field('selecciona_posts');
 $include_rss= get_field('incluir_rss');
 $rss = get_field('rss');
+$rss_titulo = get_field('rss_titulo');
 
 if($selecciona_post_tribuna){
     $author = get_the_terms($selecciona_post_tribuna[0], 'autores');
@@ -128,17 +129,19 @@ if ($include_rss && $include_newsletter) {
             </div>
             <?php endif; ?>
             <?php if ($include_rss): ?>
-            <div class="col-md-6 col-lg-3 mb-6 mb-lg-0">
-                <span class="d-inline-block card-category mb-2 w-100 text-center">RSS</span>
-                <div class="container d-flex align-items-center">
-                    <?php
-                    wprss_display_feed_items( $args = array(
-                        'limit' => '2',
-                        'source' => $rss
-                    ))
-                    ?>
+                <div class="widget widget-feed d-flex flex-column pb-4 col-md-6 col-lg-3 mb-6 mb-lg-0 p-0 align-self-baseline">
+                    <h3 class="ps-3 widget-title pt-2 pb-2">
+                        <?= $rss_titulo ?>
+                    </h3>
+                    <div class="widget-body">
+                        <?php
+                        wprss_display_feed_items( $args = array(
+                            'limit' => '5',
+                            'source' => $rss
+                        ))
+                        ?>
+                    </div>
                 </div>
-            </div>
             <?php endif; ?>
         </div>
     </div>

@@ -1,8 +1,11 @@
 <?php
 $post_id = get_field('selecciona_un_post');
 $primary_cat_id = get_post_meta($post_id,'_yoast_wpseo_primary_' . 'product_cat', true);
-list($category_display, $category_link) = array_values(get_yoast_category($post_id[0]));
-
+$category_display = '';
+$category_link = '';
+if($post_id){
+    list($category_display, $category_link) = array_values(get_yoast_category($post_id[0]));
+}
 ?>
 <article class="card card-opening container pb-6">
     <div class="row">

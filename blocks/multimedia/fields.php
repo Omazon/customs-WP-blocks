@@ -5,16 +5,16 @@ add_action( 'acf/include_fields', function() {
     }
 
     acf_add_local_field_group( array(
-        'key' => 'group_667247beecb7b',
-        'title' => 'Bloque - Multimedia',
+        'key' => 'group_666e041bbe784',
+        'title' => 'Bloque - Grid Multimedia',
         'fields' => array(
             array(
-                'key' => 'field_667247bfc8fda',
-                'label' => 'Inserte HTML',
-                'name' => 'inserte_html',
+                'key' => 'field_666e041bfe6e7',
+                'label' => 'Selecciona post grande',
+                'name' => 'selecciona_post_grande',
                 'aria-label' => '',
-                'type' => 'wysiwyg',
-                'instructions' => '',
+                'type' => 'relationship',
+                'instructions' => 'Selecciona post para espacio grande',
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
@@ -22,11 +22,67 @@ add_action( 'acf/include_fields', function() {
                     'class' => '',
                     'id' => '',
                 ),
-                'default_value' => '',
-                'tabs' => 'text',
-                'media_upload' => 0,
-                'toolbar' => 'full',
-                'delay' => 0,
+                'post_type' => array(
+                    0 => 'post',
+                    1 => 'tribuna',
+                    2 => 'institucion',
+                    3 => 'investigacion',
+                ),
+                'post_status' => array(
+                    0 => 'publish',
+                ),
+                'taxonomy' => '',
+                'filters' => array(
+                    0 => 'search',
+                    1 => 'taxonomy',
+                ),
+                'return_format' => 'id',
+                'min' => 1,
+                'max' => 1,
+                'elements' => array(
+                    0 => 'featured_image',
+                ),
+                'bidirectional' => 0,
+                'bidirectional_target' => array(
+                ),
+            ),
+            array(
+                'key' => 'field_666e071b4b8ca',
+                'label' => 'Selecciona post pequeño',
+                'name' => 'selecciona_post_pequeno',
+                'aria-label' => '',
+                'type' => 'relationship',
+                'instructions' => 'Selecciona post para espacio grande',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'post_type' => array(
+                    0 => 'post',
+                    1 => 'investigacion',
+                    2 => 'tribuna',
+                    3 => 'institucion',
+                ),
+                'post_status' => array(
+                    0 => 'publish',
+                ),
+                'taxonomy' => '',
+                'filters' => array(
+                    0 => 'search',
+                    1 => 'taxonomy',
+                ),
+                'return_format' => 'id',
+                'min' => 1,
+                'max' => 1,
+                'elements' => array(
+                    0 => 'featured_image',
+                ),
+                'bidirectional' => 0,
+                'bidirectional_target' => array(
+                ),
             ),
         ),
         'location' => array(
@@ -34,7 +90,7 @@ add_action( 'acf/include_fields', function() {
                 array(
                     'param' => 'block',
                     'operator' => '==',
-                    'value' => 'acf/multimedia',
+                    'value' => 'acf/grid-multimedia',
                 ),
             ),
         ),
@@ -49,4 +105,6 @@ add_action( 'acf/include_fields', function() {
         'show_in_rest' => 0,
     ) );
 } );
+
+
 

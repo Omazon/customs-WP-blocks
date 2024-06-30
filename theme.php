@@ -245,3 +245,39 @@ add_action( 'acf/include_fields', function() {
     ) );
 } );
 
+//function desregistrar_taxonomia_autores_del_tema() {
+//    unregister_taxonomy_for_object_type( 'autores', 'post','tribuna','investigacion' );
+//
+//    $labels = array(
+//        'name'              => _x( 'Autores', 'taxonomy general name', 'textdomain' ),
+//        'singular_name'     => _x( 'Autor', 'taxonomy singular name', 'textdomain' ),
+//        'search_items'      => __( 'Buscar Autores', 'textdomain' ),
+//        'all_items'         => __( 'Todos los Autores', 'textdomain' ),
+//        'parent_item'       => __( 'Autor Padre', 'textdomain' ),
+//        'parent_item_colon' => __( 'Autor Padre:', 'textdomain' ),
+//        'edit_item'         => __( 'Editar Autor', 'textdomain' ),
+//        'update_item'       => __( 'Actualizar Autor', 'textdomain' ),
+//        'add_new_item'      => __( 'Añadir Nuevo Autor', 'textdomain' ),
+//        'new_item_name'     => __( 'Nuevo Nombre de Autor', 'textdomain' ),
+//        'menu_name'         => __( 'Autores', 'textdomain' ),
+//    );
+//
+//    $args = array(
+//        'hierarchical'      => false,
+//        'labels'            => $labels,
+//        'show_ui'           => true,
+//        'show_admin_column' => true,
+//        'query_var'         => true,
+//        'rewrite'           => array( 'slug' => 'autor' ),
+//        'show_in_rest'      => true, // Asegura que se muestre en el editor de Gutenberg
+//        'rest_base'         => 'autores', // Asegura la ruta correcta en la API REST
+//    );
+//
+//    register_taxonomy( 'autores', array( 'post','tribuna','investigacion' ), $args );
+//}
+//add_action( 'init', 'desregistrar_taxonomia_autores_del_tema' );
+
+
+
+
+

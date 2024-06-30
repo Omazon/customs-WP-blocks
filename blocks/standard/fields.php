@@ -24,11 +24,17 @@ add_action( 'acf/include_fields', function() {
                 ),
                 'post_type' => array(
                     0 => 'post',
+                    1 => 'tribuna',
+                    2 => 'investigacion',
+                    3 => 'institucion',
                 ),
-                'post_status' => '',
+                'post_status' => array(
+                    0 => 'publish',
+                ),
                 'taxonomy' => '',
                 'filters' => array(
                     0 => 'search',
+                    1 => 'taxonomy',
                 ),
                 'return_format' => 'id',
                 'min' => 3,
@@ -61,4 +67,6 @@ add_action( 'acf/include_fields', function() {
         'show_in_rest' => 0,
     ) );
 } );
+
+
 
