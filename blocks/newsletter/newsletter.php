@@ -101,10 +101,6 @@ if(count($selecciona_posts) ==4){
                                  class="card-img object-fit-cover wp-post-image"
                                  alt="<?= get_the_title($post) ?>"
                                  decoding="async">
-                            <svg class="card-figure-ico position-absolute" width="118" height="118"
-                                 viewBox="0 0 118 118">
-                                <use xlink:href="#svg-video"></use>
-                            </svg>
                         </a>
                     </figure>
                     <?php if(isset($category_display)): ?>

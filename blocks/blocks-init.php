@@ -96,9 +96,6 @@ add_action( 'init', 'gb_register_acf_blocks' );
                 'description' => _x( 'Un patrón de bloques: Entrada', 'Block pattern description', 'GB' ),
                 'categories'  => array( 'guegue' ),
                 'content'     => '
-                <!-- wp:acf/title /-->
-                <!-- wp:acf/extract /-->
-                <!-- wp:acf/thumbnail /-->
                 <!-- wp:acf/content /-->
                 <!-- wp:acf/quote /-->
                 <!-- wp:acf/destacado /-->
@@ -112,9 +109,6 @@ add_action( 'init', 'gb_register_acf_blocks' );
                 'description' => _x( 'Un patrón de bloques: Entevista', 'Block pattern description', 'GB' ),
                 'categories'  => array( 'guegue' ),
                 'content'     => '
-                <!-- wp:acf/title /-->
-                <!-- wp:acf/extract /-->
-                <!-- wp:acf/thumbnail {"name":"acf/thumbnail","data":{"tipo_de_item_destacado":"video","_tipo_de_item_destacado":"field_667215a5a6424","youtube_embed_url":"qjOB4jb_06c","_youtube_embed_url":"field_6672161da6425"},"mode":"preview"} /-->
                 <!-- wp:acf/content /-->
                 <!-- wp:acf/quote /-->
                 <!-- wp:acf/destacado /-->
@@ -128,9 +122,6 @@ add_action( 'init', 'gb_register_acf_blocks' );
                 'description' => _x( 'Un patrón de bloques: Tribuna', 'Block pattern description', 'GB' ),
                 'categories'  => array( 'guegue' ),
                 'content'     => '
-                <!-- wp:acf/title /-->
-                <!-- wp:acf/extract /-->
-                <!-- wp:acf/thumbnail {"name":"acf/thumbnail","data":{"tipo_de_item_destacado":"tribuna","_tipo_de_item_destacado":"field_667215a5a6424","selecciona_author":"1409","_selecciona_author":"field_66722029cae5d"},"mode":"preview"} /-->   
                 <!-- wp:acf/content /-->
                 <!-- wp:acf/quote /-->
                 <!-- wp:acf/destacado /-->
@@ -144,8 +135,7 @@ add_action( 'init', 'gb_register_acf_blocks' );
                 'description' => _x( 'Un patrón de bloques: Multimedia', 'Block pattern description', 'GB' ),
                 'categories'  => array( 'guegue' ),
                 'content'     => '
-                <!-- wp:acf/extract {"name":"acf/extract","data":{"field_667245d64d40d":"1"},"mode":"preview"} /-->
-                <!-- wp:acf/multimedia {"name":"acf/multimedia","data":{"field_667247bfc8fda":"\u003cstrong\u003eArroz\u003c/strong\u003e"},"mode":"preview"} /-->
+                <!-- wp:html /-->
             ',
             )
         );
@@ -175,3 +165,11 @@ function load_just_categories_filter( $field ) {
 
     return $field;
 }
+
+function my_acf_relationship_query( $args, $field, $post_id ) {
+    $args['orderby'] = 'date';
+    $args['order'] = 'DESC';
+
+    return $args;
+}
+add_filter('acf/fields/relationship/query', 'my_acf_relationship_query', 10, 3);

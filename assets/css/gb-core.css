@@ -54,3 +54,10 @@
 .single-post .block-media header{
     width: 100vw !important;
 }
+
+@media (min-width: 992px) {
+    .entry-content .ratio-16x9, .entry-content .size-large {
+       margin: 0 !important;
+        width: unset !important;
+    }
+}

@@ -33,23 +33,23 @@ if($tipo_de_listado == 'cron') {
     usort($grouped_categories, function ($a, $b) {
         return $b['nombre_categoria'] - $a['nombre_categoria'];
     });
-}
-foreach ($categories as $categoria) {
+} else {
+    foreach ($categories as $categoria) {
 
-    if (!is_numeric($categoria->name)) {
-        $normalized_name = normalize($categoria->name);
-        $first_letter = strtoupper($normalized_name[0]);
+        if (!is_numeric($categoria->name)) {
+            $normalized_name = normalize($categoria->name);
+            $first_letter = strtoupper($normalized_name[0]);
 
-        if (!array_key_exists($first_letter, $grouped_categories)) {
-            $grouped_categories[$first_letter] = array();
+            if (!array_key_exists($first_letter, $grouped_categories)) {
+                $grouped_categories[$first_letter] = array();
+            }
+            $grouped_categories[$first_letter][] = $categoria;
         }
-        $grouped_categories[$first_letter][] = $categoria;
     }
 }
 
-
 ?>
-<article class="entry container g-lg-6 mb-10">
+<article class="container g-lg-6 mb-10">
     <header class="page-header mb-4 mb-lg-6 text-center pt-4 pt-lg-10">
         <h1 class="page-title mb-0"><?= get_the_title() ?></h1>
     </header>
