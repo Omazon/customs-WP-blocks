@@ -3,7 +3,7 @@
 Plugin Name: Guegue Blocks
 Plugin URI: https://www.guegue.com/
 Description: Plugin de bloques personalizados para somosiberoamerica.org
-Version: 
+Version: 1.0.0
 Author: Omar Boza
 Author URI: https://www.guegue.com/
 Text Domain: gb

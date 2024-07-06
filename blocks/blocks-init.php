@@ -4,7 +4,6 @@ require_once GB_PLUGIN_DIR.'blocks/title/fields.php';
 require_once GB_PLUGIN_DIR.'blocks/highlight/fields.php';
 require_once GB_PLUGIN_DIR.'blocks/newsletter/fields.php';
 require_once GB_PLUGIN_DIR.'blocks/grid-multimedia/fields.php';
-require_once GB_PLUGIN_DIR.'blocks/standard/fields.php';
 require_once GB_PLUGIN_DIR.'blocks/entries/fields.php';
 require_once GB_PLUGIN_DIR.'blocks/links/fields.php';
 require_once GB_PLUGIN_DIR.'blocks/content/fields.php';
@@ -29,7 +28,6 @@ function gb_register_acf_blocks() {
     register_block_type(GB_PLUGIN_DIR.'/blocks/highlight');
     register_block_type(GB_PLUGIN_DIR.'/blocks/newsletter');
     register_block_type(GB_PLUGIN_DIR.'/blocks/grid-multimedia');
-    register_block_type(GB_PLUGIN_DIR.'/blocks/standard');
     register_block_type(GB_PLUGIN_DIR.'/blocks/entries');
     register_block_type(GB_PLUGIN_DIR.'/blocks/links');
     register_block_type(GB_PLUGIN_DIR.'/blocks/extract');
@@ -63,7 +61,6 @@ add_action( 'init', 'gb_register_acf_blocks' );
                 <!-- wp:acf/highlight /-->
                 <!-- wp:acf/newsletter /-->
                 <!-- wp:acf/grid-multimedia /-->
-                <!-- wp:acf/standard /-->
             ',
             )
         );
