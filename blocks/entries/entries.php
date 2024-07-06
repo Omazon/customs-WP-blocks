@@ -30,9 +30,6 @@ $posts = get_posts(array(
                                  class="card-img img-fluid object-fit-cover wp-post-image" alt="<?= the_title(); ?>"
                                  decoding="async"
                                  fetchpriority="high">
-                            <svg class="card-figure-ico position-absolute" width="118" height="118" viewBox="0 0 118 118">
-                                <use xlink:href="#svg-video"></use>
-                            </svg>
                         </a>
                     </figure>
                     <a class="d-inline-block card-category mb-2" href="<?= $category_link1 ?>"><?= $category_display1 ?></a>
