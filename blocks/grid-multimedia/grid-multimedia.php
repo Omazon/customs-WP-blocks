@@ -19,6 +19,9 @@ if($post_grande && $post_pequeno) {
                     <figure class="card-figure">
                         <a href="<?= get_permalink($post_grande[0]) ?>" class="d-block position-relative ">
                             <img width="700" height="467" src="<?= get_the_post_thumbnail_url($post_grande[0]) ?>" class="card-img img-fluid wp-post-image" alt="<?= get_the_title($post_grande[0]) ?>" decoding="async" />
+                            <svg class="card-figure-ico position-absolute" width="118" height="118" viewBox="0 0 118 118">
+                                <use xlink:href="#svg-video"></use>
+                            </svg>
                         </a>
                     </figure>
                     <a class="d-inline-block card-category mb-2" href="<?= $category_link_grande ?>"><?= $category_display_grande ?></a>
@@ -37,6 +40,9 @@ if($post_grande && $post_pequeno) {
                     <figure class="card-figure">
                         <a href="<?= get_permalink($post_pequeno[0]) ?>" class="d-block position-relative ">
                             <img width="270" height="214" src="<?= get_the_post_thumbnail_url($post_pequeno[0]) ?>" class="card-img img-fluid wp-post-image" alt="<?= get_the_title($post_pequeno[0]) ?>" decoding="async">
+                            <svg class="card-figure-ico position-absolute" width="118" height="118" viewBox="0 0 118 118">
+                                <use xlink:href="#svg-video"></use>
+                            </svg>
                         </a>
                     </figure>
                     <a class="d-inline-block card-category mb-2" href="<?= $category_link_pequeno ?>"><?= $category_display_pequeno ?></a>

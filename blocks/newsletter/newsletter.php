@@ -99,8 +99,8 @@ if(count($selecciona_posts) ==4){
                             <img width="667" height="666"
                                  src="<?= get_the_post_thumbnail_url($post) ?>"
                                  class="card-img object-fit-cover wp-post-image"
-                                 alt="<?= get_the_title($post) ?>"
-                                 decoding="async">
+                                 alt="<?= htmlspecialchars(strip_tags(get_the_title($post)), ENT_QUOTES, 'UTF-8') ?>"
+                                 decoding="async"/>
                         </a>
                     </figure>
                     <?php if(isset($category_display)): ?>

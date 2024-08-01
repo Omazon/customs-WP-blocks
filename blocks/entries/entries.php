@@ -34,7 +34,7 @@ $posts = get_posts(array(
                     </figure>
                     <a class="d-inline-block card-category mb-2" href="<?= $category_link1 ?>"><?= $category_display1 ?></a>
                     <h2 class="card-title">
-                        <a href="<?= the_permalink(); ?>""><?= the_title(); ?></a>
+                        <a href="<?= the_permalink(); ?>"><?= the_title(); ?></a>
                     </h2>
                     <div class="card-meta">
                         <div class="card-published text-uppercase mt-3">
@@ -62,3 +62,4 @@ $posts = get_posts(array(
             </div>
         </nav>
     </div>
+</div>
